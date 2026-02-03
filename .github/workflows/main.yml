@@ -28,3 +28,7 @@ jobs:
         run: |
           echo "Ejecutando pruebas de calidad de código..."
           # Aquí podrías poner 'pytest' más adelante
+
+      - name: Ejecutar Pruebas
+        run: |
+          pytest test_app.py
