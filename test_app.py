@@ -1,7 +1,6 @@
-from app import predecir_inventario
-import pytest
+from app import obtener_precision_modelo
 
-def test_prediccion_logica():
-    resultado = predecir_inventario(100)
-    # Usamos approx para ignorar esos mini decimales de error
-    assert resultado == pytest.approx(110)
+def test_calidad_modelo():
+    precision = obtener_precision_modelo()
+    # Verificamos que el modelo de IA tenga una precisión mínima aceptable (ej. 70%)
+    assert precision > 0.70
